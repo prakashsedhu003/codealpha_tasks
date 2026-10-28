@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEasy – Accessories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announce">Accessories for Him &amp; Her — curated for you</div>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      <nav id="navLinks" class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">All</a>
+        <a href="products.html?gender=men">Men</a>
+        <a href="products.html?gender=women">Women</a>
+      </nav>
+      <a class="logo" href="index.html">SHOP<span>EASY</span></a>
+      <div class="nav-right">
+        <span id="authLinks" class="auth-links">
+          <a href="login.html">Login</a>
+          <a href="register.html" class="btn btn-sm">Register</a>
+        </span>
+        <a href="cart.html" class="cart-link">Bag <span class="cart-badge" id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <span class="eyebrow">Our Collection</span>
+      <h1 id="pageTitle">All Accessories</h1>
+    </div>
+  </section>
+
+  <main class="container section">
+    <div class="gender-tabs" id="genderTabs">
+      <button class="gender-tab active" data-gender="all">All Accessories <span class="count"></span></button>
+      <button class="gender-tab" data-gender="men">Men <span class="count"></span></button>
+      <button class="gender-tab" data-gender="women">Women <span class="count"></span></button>
+    </div>
+
+    <div class="filters">
+      <input type="search" id="searchInput" placeholder="Search accessories..." />
+      <select id="categoryFilter">
+        <option value="">All types</option>
+      </select>
+    </div>
+
+    <div id="message"></div>
+    <div id="product-grid" class="product-grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="logo footer-logo" href="index.html">SHOP<span>EASY</span></a><p>Thoughtfully selected accessories, beautifully presented.</p></div>
+      <div><h4>Shop</h4><a href="products.html?gender=men">Men</a><a href="products.html?gender=women">Women</a><a href="cart.html">Shopping bag</a></div>
+      <div><h4>Account</h4><a href="login.html">Login</a><a href="register.html">Register</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 ShopEasy. All rights reserved.</div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

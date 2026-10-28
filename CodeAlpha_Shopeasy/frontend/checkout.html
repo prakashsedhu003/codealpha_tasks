@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEasy – Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announce">Accessories for Him &amp; Her — curated for you</div>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      <nav id="navLinks" class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">All</a>
+        <a href="products.html?gender=men">Men</a>
+        <a href="products.html?gender=women">Women</a>
+      </nav>
+      <a class="logo" href="index.html">SHOP<span>EASY</span></a>
+      <div class="nav-right">
+        <span id="authLinks" class="auth-links">
+          <a href="login.html">Login</a>
+          <a href="register.html" class="btn btn-sm">Register</a>
+        </span>
+        <a href="cart.html" class="cart-link">Bag <span class="cart-badge" id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <span class="eyebrow">Almost There</span>
+      <h1>Checkout</h1>
+    </div>
+  </section>
+
+  <main class="container section">
+    <div id="message"></div>
+
+    <div class="checkout-layout" id="checkoutLayout">
+      <form id="checkoutForm" class="card form-card" novalidate>
+        <h3>Shipping Details</h3>
+
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required />
+          <small class="field-error" id="nameError"></small>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <small class="field-error" id="emailError"></small>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="9876543210" required />
+            <small class="field-error" id="phoneError"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" placeholder="House no, street, area" required></textarea>
+          <small class="field-error" id="addressError"></small>
+        </div>
+
+        <div class="form-row three">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required />
+            <small class="field-error" id="cityError"></small>
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required />
+            <small class="field-error" id="stateError"></small>
+          </div>
+          <div class="form-group">
+            <label for="postalCode">Postal code</label>
+            <input type="text" id="postalCode" name="postalCode" required />
+            <small class="field-error" id="postalCodeError"></small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-block btn-lg" id="placeOrderBtn">Place Order</button>
+      </form>
+
+      <aside class="card summary-card">
+        <h3>Order Summary</h3>
+        <div id="orderSummary"></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="logo footer-logo" href="index.html">SHOP<span>EASY</span></a><p>Thoughtfully selected accessories, beautifully presented.</p></div>
+      <div><h4>Shop</h4><a href="products.html?gender=men">Men</a><a href="products.html?gender=women">Women</a><a href="cart.html">Shopping bag</a></div>
+      <div><h4>Account</h4><a href="login.html">Login</a><a href="register.html">Register</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 ShopEasy. All rights reserved.</div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

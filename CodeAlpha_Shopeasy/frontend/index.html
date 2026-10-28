@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEasy – Accessories for Men &amp; Women</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="announce">Accessories for Him &amp; Her — curated for you</div>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      <nav id="navLinks" class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">All</a>
+        <a href="products.html?gender=men">Men</a>
+        <a href="products.html?gender=women">Women</a>
+      </nav>
+      <a class="logo" href="index.html">SHOP<span>EASY</span></a>
+      <div class="nav-right">
+        <span id="authLinks" class="auth-links">
+          <a href="login.html">Login</a>
+          <a href="register.html" class="btn btn-sm">Register</a>
+        </span>
+        <a href="cart.html" class="cart-link">Bag <span class="cart-badge" id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">New Season</span>
+      <h1>Accessories that<br /><em>complete every look</em></h1>
+      <p>Watches, bags, belts, eyewear and more — thoughtfully selected for men and women.</p>
+      <div class="hero-actions">
+        <a href="products.html?gender=men" class="btn btn-lg">Shop Men</a>
+        <a href="products.html?gender=women" class="btn btn-lg btn-ghost">Shop Women</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container features-grid">
+      <div><span class="feature-icon">◆</span><h4>Curated Selection</h4><p>Every piece is chosen with care.</p></div>
+      <div><span class="feature-icon">◆</span><h4>Secure Checkout</h4><p>Shop with confidence.</p></div>
+      <div><span class="feature-icon">◆</span><h4>Dedicated Support</h4><p>We are here when you need us.</p></div>
+    </div>
+  </section>
+
+  <section class="shop-by">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="eyebrow">Shop By</span>
+        <h2>Accessories for Everyone</h2>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="shop-by-grid">
+        <a href="products.html?gender=men" class="shop-tile tile-men">
+          <span class="tile-label">For Him</span>
+          <h3>Men's Accessories</h3>
+          <span class="tile-cta">Shop now →</span>
+        </a>
+        <a href="products.html?gender=women" class="shop-tile tile-women">
+          <span class="tile-label">For Her</span>
+          <h3>Women's Accessories</h3>
+          <span class="tile-cta">Shop now →</span>
+        </a>
+        <a href="products.html" class="shop-tile tile-all">
+          <span class="tile-label">Everything</span>
+          <h3>All Accessories</h3>
+          <span class="tile-cta">Browse all →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container section">
+    <div class="section-head centered">
+      <span class="eyebrow">The Collection</span>
+      <h2>Featured Pieces</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div id="message"></div>
+    <div id="product-grid" class="product-grid" data-limit="4"></div>
+    <div class="center more-wrap">
+      <a href="products.html" class="btn btn-outline">View All Accessories</a>
+    </div>
+  </main>
+
+  <section class="promo">
+    <div class="container">
+      <span class="eyebrow">ShopEasy</span>
+      <h2>Crafted for those who appreciate the finer details</h2>
+      <a href="register.html" class="btn">Create an Account</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="logo footer-logo" href="index.html">SHOP<span>EASY</span></a><p>Thoughtfully selected accessories, beautifully presented.</p></div>
+      <div><h4>Shop</h4><a href="products.html?gender=men">Men</a><a href="products.html?gender=women">Women</a><a href="cart.html">Shopping bag</a></div>
+      <div><h4>Account</h4><a href="login.html">Login</a><a href="register.html">Register</a></div>
+    </div>
+    <div class="footer-bottom">© 2026 ShopEasy. All rights reserved.</div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

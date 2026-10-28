@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#eef2f9">
+  <title>ConnectSphere – Home</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%232563EB'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='2.4'/%3E%3Ccircle cx='23' cy='9' r='2.6' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Runs before the page paints so the saved theme never flashes -->
+  <script src="js/theme.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="app-shell has-rail">
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+    <div class="app-center">
+      <header class="topbar" id="topbar"></header>
+      <main class="page" id="main" tabindex="-1">
+        <div class="notice notice-demo" id="demoBanner" role="status" hidden>
+          <i class="fa-solid fa-flask" aria-hidden="true"></i>
+          <span><strong>Sample content.</strong> The backend has no <code>GET /api/posts</code> route yet, so these posts are placeholders. Likes, comments, edits and deletes here are not saved.</span>
+        </div>
+        <section id="storiesSection" aria-label="Stories">
+          <ul class="stories" id="stories"></ul>
+        </section>
+        <h1 class="view-title" id="viewTitle"></h1>
+        <div class="chips" id="exploreTopics" aria-label="Trending topics" hidden></div>
+        <div class="post-list" id="postList" aria-live="polite"></div>
+      </main>
+    </div>
+    <aside class="rail" id="rail" aria-label="Suggestions and trends">
+      <section class="rail-card" aria-labelledby="sugTitle">
+        <h2 id="sugTitle">Suggested for you</h2>
+        <ul id="suggestedList"></ul>
+        <p class="rail-note">Sample people. Following works once the backend has a follow route.</p>
+      </section>
+      <section class="rail-card" aria-labelledby="trendTitle">
+        <h2 id="trendTitle">Trending topics</h2>
+        <ul id="trendingList"></ul>
+      </section>
+    </aside>
+  </div>
+  <nav class="bottom-nav" id="bottomNav" aria-label="Mobile navigation"></nav>
+  <div class="toast-root" id="toast-root" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/sample-data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/posts.js"></script>
+  <script src="js/feed.js"></script>
+</body>
+</html>

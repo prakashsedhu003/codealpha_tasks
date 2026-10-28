@@ -1,0 +1,48 @@
+/* ConnectSphere – profile page */
+.profile-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-card); box-shadow: var(--shadow); overflow: hidden; }
+.cover {
+  height: 170px; background-color: var(--accent); background-size: cover; background-position: center;
+  background-image: radial-gradient(circle at 18% 120%, rgba(255, 255, 255, 0.22) 0 28%, transparent 29%), radial-gradient(circle at 86% -10%, rgba(255, 255, 255, 0.16) 0 24%, transparent 25%);
+}
+.cover.skeleton { background: var(--card-2); }
+.profile-main { position: relative; display: grid; gap: 2px; padding: 0 22px 22px; }
+.profile-avatar { margin-top: -52px; width: max-content; border-radius: 50%; border: 5px solid var(--card); background: var(--card); }
+.profile-actions { position: absolute; top: 14px; right: 22px; display: flex; gap: 8px; }
+.profile-name { margin-top: 10px; font-size: 24px; letter-spacing: -0.02em; line-height: 1.2; }
+.profile-handle { color: var(--muted); }
+.profile-bio { margin-top: 8px; max-width: 60ch; overflow-wrap: anywhere; }
+.profile-stats { display: flex; gap: 28px; margin-top: 16px; }
+.profile-stats div { display: grid; }
+.profile-stats dd { font-size: 18px; font-weight: 700; order: -1; }
+.profile-stats dt { font-size: 13px; color: var(--muted); }
+
+.profile-section-title { font-size: 15px; font-weight: 700; padding: 4px 2px 0; }
+.post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.post-grid .grid-empty { grid-column: 1 / -1; }
+.grid-tile { position: relative; display: block; width: 100%; aspect-ratio: 1; border-radius: 12px; overflow: hidden; background: var(--card-2); }
+.grid-tile img { width: 100%; height: 100%; object-fit: cover; }
+.grid-tile .media-fallback { min-height: 0; }
+.tile-text { display: grid; place-items: center; height: 100%; padding: 12px; text-align: center; font-size: 13px; color: var(--muted); overflow: hidden; }
+.tile-meta {
+  position: absolute; inset: auto 0 0 0; display: flex; gap: 12px; justify-content: center; padding: 22px 8px 8px;
+  font-size: 12.5px; font-weight: 600; color: #fff; background: linear-gradient(transparent, rgba(2, 6, 23, 0.7));
+  opacity: 0; transition: opacity 0.15s;
+}
+.grid-tile:hover .tile-meta, .grid-tile:focus-visible .tile-meta { opacity: 1; }
+@media (hover: none) { .tile-meta { opacity: 1; } }
+
+dialog.lightbox { width: min(94vw, 560px); }
+.lightbox img { width: 100%; max-height: 60vh; object-fit: cover; }
+.lightbox-body { padding: 16px 20px 4px; display: grid; gap: 6px; }
+.lightbox-body small { color: var(--muted); }
+.lightbox > .btn { margin: 6px 12px 12px auto; display: flex; }
+
+@media (max-width: 760px) {
+  .cover { height: 120px; }
+  .profile-main { padding: 0 16px 18px; }
+  .profile-avatar { margin-top: -44px; }
+  .profile-avatar .avatar-xl { --size: 88px; }
+  .profile-actions { position: static; margin-top: 10px; }
+  .profile-name { margin-top: 6px; }
+  .profile-stats { gap: 22px; }
+}
